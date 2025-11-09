@@ -42,3 +42,52 @@ h1 {
     text-align: center;         /* center text inside */
     padding: 4rem 0;            /* breathing room top/bottom */
 }
+
+/* Buttons: base, variants, layout */
+.btn-row {
+    display: inline-flex;           /* lay buttons in a row */
+    gap: 0.75rem;                   /* space between buttons */
+    margin-top: 1.25rem;            /* space above the buttons */
+    flex-wrap: wrap;                /* wrap on small screens */
+    justify-content: center;        /* center the row in hero */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1 rem;
+    border: 1px solid #d0b766;      /* gold-ish border */
+    border-radius: 10px;
+    background: transparent;
+    color: #f6e7b4;                 /* readable gold text */
+    font-weight: 700;
+    text-decoration: none;            /* remove underline */
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 100ms ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: #d0b766;
+    color: #171717;                 /* dark text on gold bg */
+    outline: none;                    /* we'll show focus ring separately */
+}
+
+.btn:active {
+    transform: translateY(1px);     /* tiny press feel */
+}
+
+/* A filled (primary) variant */
+.btn--primary {
+    background: #d0b766;
+    color: #171717
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visble {
+    background: #e7cd7a;
+    border-color: #e7cd7a;
+}
+
+/* Focus ring for accessibility (keyboard users) */
+.btn:focus-visible {
+    box-shadow: 0 0 0 3px rgba(208,183,102,.4);
+}
