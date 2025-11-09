@@ -11,6 +11,13 @@ h1 {
     transition: color 250ms ease, text-shadow 250ms ease;
 }
 
+/* Slightly larger paragraph for hero intros */
+.lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
 .is-gold { color: gold; }
 .is-red { color: red; }
 
@@ -18,4 +25,14 @@ h1 {
         text-shadow: 0 0 12px rgba(255, 215, 0, .8),
                      0 0 24px rgba(255, 215, 0, .4);
         cursor: pointer;
+}
+
+/* Center the first screen section vertially and horizontally */
+.hero {
+    min-height: 80vh;           /* take most of the viewport height */
+    display: flex;              /* turn on Flexbox */
+    align-items: center;        /* vertical center */
+    justify-content: center;    /* horizontal center */
+    text-align: center;         /* center text inside */
+    padding: 4rem 0;            /* breathing room top/bottom */
 }
